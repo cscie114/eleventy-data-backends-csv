@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+:root {
+    --ink: rgb(10,10,10);
+    --gray-bkgd: rgb(240,240,240);
+}
+body {
+    font-family: helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main,
+header,
+footer {
+    padding: 1rem 3rem;
+}
+header { display: grid;
+grid-template-columns: 4fr 1fr;
+margin-bottom: 1rem;}
+header h1 { margin-bottom: 1rem;}
+header nav { justify-self: end;}
+main { padding-top: 0;}
+
+footer {
+    padding-top: 0.5rem;
+    border-top: 2px solid black;
+}
+
+ul.listing li {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+ul.listing.compact li {
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+}
+.courses .title,
+.courses .short-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.courses .faculty-description {
+    font-style: italic;
+}
+
+.courses .description {
+    padding: 1rem;
+}
+
+.courses .more {
+    padding-right: 1rem;
+    text-align: right;
+}
+
+
+
+div.resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+    padding: 0;
+  
+  }
+  div.resource {
+    border: thin solid black;
+    padding: 1rem;
+  }
+  
+  div.title {
+    margin: 0.5rem 0;
+    font-size: larger;
+  }
+  div.hostname {
+    font-family: "Source Code Pro", monospace;
+    font-weight: normal;
+    margin: 0.25rem 0;
+  }
+  .resources .resource img {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: blue;
+    text-decoration: none;
+  }
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+  a.concealed:link,
+  a.concealed:visited,
+  a.concealed:hover,
+  a.concealed:active {
+    color: black;
+    text-decoration: none;
+  }

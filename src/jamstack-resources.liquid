@@ -1,0 +1,16 @@
+---
+title: Jamstack Resources
+layout: base 
+---
+<div class="resources">
+  {% assign resourcesList = urls %}
+  {% for r in resourcesList %}
+    <div class="resource">
+      {% if r.localImage %}<img src="/assets/{{r.localImage}}"/>
+      {% elsif r.image %}<img src="{{r.image}}" />{% endif %}
+      {% if r.title %}<div class="title"><a href="{{r.url}}">{{  r.title }}</a></div>{% endif %}
+      {% if r.url %}<div class="hostname">{% hostname r.url %}</div>{% endif %}
+      {% if r.description %}<div class="description">{{  r.description }}</div>{% endif %}
+    </div>
+  {% endfor %}
+</div>

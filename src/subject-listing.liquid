@@ -1,0 +1,12 @@
+---
+title: Course Subjects
+layout: base
+---
+
+<ul class="listing compact subjects">
+  {% for s in collections.subjects %}
+    <li>
+      <a href="{{ s.url }}">{{ s.data.title }}</a> NUMBER
+    </li>
+  {% endfor %}
+</ul>

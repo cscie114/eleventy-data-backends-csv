@@ -1,0 +1,29 @@
+---
+title: Course Subjects
+layout: base
+pagination:
+  data: subjects
+  size: 1
+  alias: s
+  addAllPagesToCollections: true
+permalink: "subject/{{ s.subjectCode | slugify }}-{{ s.subjectFullName | slugify }}/"
+tags:
+  - "subjects"
+eleventyComputed:
+  title: "{{ s.subjectFullName }}"
+---
+<ul class="courses listing">
+  {% for c in courses %}
+    {% if c.subjectCode == s.subjectCode %}
+      <li>
+        <div class="short-title">{{ c.shortTitle }}</div>
+        <div class="title">{{ c.title }}</div>
+        <div class="faculty-description">{{ c.facultyDescription }}</div>
+        <div class="description">{{ c.description }}</div>
+        <div class="more">
+          <a href="{{ c.url }}">More information about {{ c.subjectCode }}&#160;{{ c.courseNumber }}</a>
+        </div>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,17 @@
+---
+title: Courses
+layout: base
+---
+<ul class="courses listing">
+  {% for c in courses %}
+    <li>
+      <div class="short-title">{{ c.shortTitle }}</div>
+      <div class="title">{{ c.title }}</div>
+      <div class="faculty-description">{{ c.facultyDescription }}</div>
+      <div class="description">{{ c.description }}</div>
+      <div class="more">
+        <a href="{{ c.url }} ">More information about {{ c.subjectCode }}&#160;{{ c.courseNumber }}</a>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
